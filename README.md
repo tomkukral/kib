@@ -3,10 +3,14 @@ Kubernetes image builder is simple service capable to build custom images and pu
 
 ## Instalation
 
-. Create custom resources
+1. Create custom resources
 
 ```
 kubectl apply -f resources/
 ```
 
-. Run controller
+2. Run controller
+
+```
+python kib/main.py
+```
