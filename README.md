@@ -14,5 +14,12 @@ kubectl apply -f resources/
 2. Run controller
 
 ```
-python kib/main.py
+python3 -m kib
 ```
+
+3. Add Image resources and wait for them to get builded. Image examples can be found in `examples/`
+
+
+## Demo
+
+[![asciicast](https://asciinema.org/a/137445.png)](https://asciinema.org/a/137445)
