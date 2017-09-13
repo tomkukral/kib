@@ -11,7 +11,7 @@ Image controller is listening for changes in Kubernetes API and build missing im
 kubectl apply -f resources/
 ```
 
-2. Run controller
+2. Run controller (directy integration into Kubernetes and running as pod will be available in next version)
 
 ```
 python3 -m kib
