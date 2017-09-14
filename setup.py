@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 version = '0.1'
 
-with open('README.rst') as f:
+with open('README.md') as f:
     long_description = ''.join(f.readlines())
 
 setup(
@@ -17,7 +17,20 @@ setup(
     download_url='https://github.com/tomkukral/kib/archive/v{}.tar.gz'.format(version),
     packages=find_packages(),
     zip_safe=False,
-    install_requires=[],
+    install_requires=[
+        'kubernetes',
+        'pytest',
+        'docker-registry-client',
+        'requests',
+        'docker',
+    ],
+    classifiers=[
+        'Operating System :: POSIX :: Linux',
+        'Programming Language :: Python',
+        'Programming Language :: Python :: Implementation :: CPython',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.5',
+    ],
     entry_points={
         'console_scripts': [
             'kib = kib:main',
