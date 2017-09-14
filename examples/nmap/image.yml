@@ -3,6 +3,10 @@ kind: Image
 metadata:
   name: nmap
 spec:
-  # type: Docker
-  # dest: localhost:5000
+  #type: Docker
+  #dest: localhost:5000
+  name: tomkukral/nmap
+  tags:
+    - latest
+    - dev
   source: https://github.com/tomkukral/kib/raw/master/examples/nmap/Dockerfile
