@@ -19,6 +19,16 @@ python3 -m kib
 
 3. Add Image resources and wait for them to get builded. Image examples can be found in `examples/`
 
+## Configuration
+
+Configuration options are defined by environment variables.
+
+Name | Default | Description
+--- | --- | ---
+`KIB_CONFIG` | `incluster` | Define how to load configuration
+`KIB_BUILD_MISSING` | `1` | Build missing images on start
+`KIB_WATCH` | `1` | Keep watching for new images
+
 
 ## Demo
 
