@@ -7,3 +7,11 @@ install:
 script:
 - python3 -m flake8
 - python3 -m pytest
+deploy:
+  provide: pypi
+  user: tomkukral
+  true:
+    tags: true
+    repo: tomkukral/kib
+  password:
+    secure: UN6khGeTEQXb9xSrOyqDhgGdDd2iTgsGFO5b0Sr4atNEX9qHsI8tBJV7ZyBZwYfFZpUIeRKuKKwrgTHpSkqakBdZonWeM7MmND0QVXuv3AwfmsCmyOOH5HfqICvH36w7KgY9zZsdTc/+U+qq0qmZUfpFOsRVs83rpcF5SSN7PHYtCodts8Ziro48pyltTF17nUhqTSsbadACOM2T3+Se16AJgC8V8sdGiOdzoTYjG4ALB10xqkkmfCGKpMmZiJUlAJe5S53HqsBxZe3vp1UP15gKIO5W7WNMflSR5iZiSTqIuEVqreXu7n9+IK2H/4c65928MvzxzMJc55uMkGFB4zN2COR5P2HsvuWb9vM4HM5VV3jbUOLKFnviHFOVLBpEh5o460NWLTptUQaPDe3eq8bm3tc51n5rcyOtHX442mm880RM82b9TIsrO59BiXQEINLZatUIIx3OqLhXW4d8eO+6OixfVtjbAdmcwXiIwAjl72S6a8yq7pDrbFGA7zumDznRYUGYfyE85zPigWMlPh2edW/fWaOk6SrJqZQNvU0Lsh2Bj73ZSOH7J/TUaiCavagxdQvwT1IHvTHRw3jptWARtZf33PGwFAuuxlPevkJjOk16ANgxcpm34O8cTMmtjm97xrplyf15PafCAV566Wgncy9tzELmo7002zO8/N0=
