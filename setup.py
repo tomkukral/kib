@@ -18,11 +18,11 @@ setup(
     packages=find_packages(),
     zip_safe=False,
     install_requires=[
+        'docker',
+        'docker-registry-client',
         'kubernetes',
         'pytest',
-        'docker-registry-client',
         'requests',
-        'docker',
     ],
     classifiers=[
         'Operating System :: POSIX :: Linux',

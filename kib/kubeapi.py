@@ -2,13 +2,18 @@ from kubernetes import client, config, watch
 
 
 class KubeAPI:
-    def __init__(self, group='k8s.6shore.net', version='v1', namespace='default'):
-        config.load_kube_config()
+    def __init__(self, **kwargs):
+
+        # load configuration
+        if kwargs.get('load_config', 'incluster') == 'incluster':
+            config.load_incluster_config()
+        elif kwargs.get('load_config') == 'local':
+            config.load_kube_config()
 
         self.api = client.CustomObjectsApi()
-        self.group = group
-        self.version = version
-        self.namespace = namespace
+        self.group = kwargs.get('group', 'k8s.6shore.net')
+        self.version = kwargs.get('version', 'v1')
+        self.namespace = kwargs.get('namespace', 'default')
 
     def _get_namespaced_custom_resources(self, plural):
         return self.api.list_namespaced_custom_object(
