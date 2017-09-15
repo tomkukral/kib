@@ -8,7 +8,7 @@ script:
 - python3 -m flake8
 - python3 -m pytest
 deploy:
-  provide: pypi
+  provider: pypi
   user: tomkukral
   true:
     tags: true
