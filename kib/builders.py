@@ -8,7 +8,7 @@ class DockerBuilder:
         print('Starting builder for image ' + image['metadata']['name'])
 
         self.tempdir = tempfile.TemporaryDirectory()
-        self.docker_client = APIClient()
+        self.docker_client = APIClient(version='auto')
 
         # prepare image variables
         self._image = image
