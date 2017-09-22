@@ -1,4 +1,13 @@
-from kubernetes import client, config, watch
+from kubernetes import client
+from kubernetes import config
+from kubernetes import watch
+from urllib3.exceptions import ProtocolError
+
+import logging
+
+# define logging
+logging.basicConfig(level=logging.DEBUG)
+logger = logging.getLogger(__name__)
 
 
 class KubeAPI:
@@ -38,5 +47,12 @@ class KubeAPI:
             )
 
         w = watch.Watch()
-        for event in w.stream(query):
-            handle(event)
+        while True:
+            try:
+                for event in w.stream(query):
+                    handle(event)
+            except ProtocolError:
+                logger.warning('Watch failed, restarting')
+                continue
+
+            break

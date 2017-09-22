@@ -29,7 +29,6 @@ Name | Default | Description
 `KIB_BUILD_MISSING` | `1` | Build missing images on start
 `KIB_WATCH` | `1` | Keep watching for new images
 
-
 ## Demo
 
 [![asciicast](https://asciinema.org/a/137445.png)](https://asciinema.org/a/137445)

@@ -1,9 +1,13 @@
 from .builders import DockerBuilder
 from .kubeapi import KubeAPI
 from .registry import Registry
-from pprint import pprint
 
 import os
+import logging
+
+# define logging
+logging.basicConfig(level=logging.DEBUG)
+logger = logging.getLogger(__name__)
 
 
 class Kib:
@@ -14,13 +18,16 @@ class Kib:
 
         # connect to Kubernetes API
         self.api = KubeAPI(load_config=self.config_load_config)
+        logger.debug('Connected to Kubernetes API: {}'.format(self.api))
 
         # check for missing images
         if self.config_build_missing:
+            logger.debug('Building missing images')
             self.build_missing()
 
         # start watching
         if self.config_watch:
+            logger.debug('Started watching for images')
             self.start()
 
     def build_missing(self):
@@ -53,7 +60,7 @@ class Kib:
         if (event['type'] in ['ADDED', 'MODIFIED']):
             self.build_image(event['object'])
         else:
-            pprint(event)
+            logger.debug(event)
 
     def start(self):
         """
