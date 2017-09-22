@@ -1,6 +1,5 @@
 from docker import APIClient
 from requests import get
-from pprint import pprint
 
 import json
 import logging

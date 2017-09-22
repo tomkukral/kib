@@ -53,7 +53,10 @@ class Kib:
         return build
 
     def build_image(self, image):
-        DockerBuilder(image)
+        try:
+            DockerBuilder(image)
+        except Exception as exc:
+            logger.error('Error building image {}: {}'.format(image['metadata']['name'], exc))
 
     def handle_event(self, event):
 
