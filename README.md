@@ -14,10 +14,25 @@ Image controller is listening for changes in Kubernetes API and build missing im
 kubectl apply -f resources/
 ```
 
-2. Run controller (running in container/pod will be available in next version)
+2. Run controller
+
+* in Kubernetes cluster
+
+```
+kubectl apply -f deploy.yml
+```
+
+* directly
 
 ```
 python3 -m kib
+```
+
+* install from PyPi
+
+```
+pip3 install kib
+kib
 ```
 
 3. Add Image resources and wait for them to get builded. Image examples can be found in `examples/`
