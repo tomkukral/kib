@@ -1,0 +1,25 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  annotations:
+  labels:
+    app: kib
+  name: kib
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: kib
+    spec:
+      containers:
+      - image: tomkukral/kib:dev
+        imagePullPolicy: Always
+        name: kib
+        volumeMounts:
+        - mountPath: /var/run
+          name: var-run
+      volumes:
+      - name: var-run
+        hostPath:
+          path: /var/run
