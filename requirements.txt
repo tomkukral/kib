@@ -1,6 +1,6 @@
+docker
+docker-registry-client
+flake8
 kubernetes
 pytest
-flake8
-docker-registry-client
 requests
-docker

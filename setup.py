@@ -21,7 +21,6 @@ setup(
         'docker',
         'docker-registry-client',
         'kubernetes',
-        'pytest',
         'requests',
     ],
     classifiers=[
