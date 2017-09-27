@@ -65,7 +65,7 @@ class DockerBuilder:
                 if action:
                     logger.debug('Added tag {}'.format(tag))
                 else:
-                    logger.eror('FAILED adding tag {}'.format(tag))
+                    logger.error('FAILED adding tag {}'.format(tag))
 
     def push(self):
 
@@ -109,4 +109,4 @@ class DockerBuilder:
                 logger.debug(msg)
 
         except json.JSONDecodeError:
-            print(l)
+            logger.warning('JSON decode error: {}'.format(l))
