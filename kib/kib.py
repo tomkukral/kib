@@ -60,7 +60,7 @@ class Kib:
 
     def handle_event(self, event):
 
-        if (event['type'] in ['ADDED', 'MODIFIED']):
+        if event['type'] in ['ADDED', 'MODIFIED']:
             self.build_image(event['object'])
         else:
             logger.debug(event)
