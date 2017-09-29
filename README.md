@@ -6,7 +6,7 @@ Kubernetes image builder is simple service capable to build custom images and pu
 
 Image controller is listening for changes in Kubernetes API and build missing images.
 
-## Instalation
+## Installation
 
 1. Create custom resources
 
