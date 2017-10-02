@@ -7,3 +7,4 @@ requests
 coveralls
 flake8
 pytest
+pytest-cov
