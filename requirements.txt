@@ -1,6 +1,9 @@
 docker
 docker-registry-client
-flake8
 kubernetes
-pytest
 requests
+
+# dev
+coveralls
+flake8
+pytest
