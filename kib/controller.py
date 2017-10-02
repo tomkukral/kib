@@ -76,7 +76,3 @@ class Kib:
 
 def main():
     Kib()
-
-
-if __name__ == '__main__':
-    main()

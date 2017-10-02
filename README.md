@@ -37,6 +37,16 @@ pip3 install kib
 kib
 ```
 
+* development (including testing Kubernetes and registry)
+
+```
+docker-compose up -d
+kubectl apply -f deploy.yml
+pip3 install -r requirements.txt
+source devenv.sh
+python -m kib
+```
+
 3. Add Image resources and wait for them to get builded. Image examples can be found in `examples/`
 
 ## Configuration
