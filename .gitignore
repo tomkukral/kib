@@ -3,3 +3,4 @@ dist
 kib.egg-info
 *.pyc
 .cache
+.coverage

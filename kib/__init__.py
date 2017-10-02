@@ -1,3 +1,3 @@
-from .kib import main
+from .controller import main
 
 __all__ = ['main']
