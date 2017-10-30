@@ -13,8 +13,8 @@ import (
 	"k8s.io/client-go/tools/cache"
 
 	dockerclient "github.com/docker/docker/client"
-	"github.com/mceloud/kib/crd"
-	"github.com/mceloud/kib/docker"
+	"github.com/tomkukral/kib/crd"
+	"github.com/tomkukral/kib/docker"
 )
 
 const ImageResourcePlural = "images"

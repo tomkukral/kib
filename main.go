@@ -5,9 +5,9 @@ import (
 	"flag"
 	"time"
 
-	"github.com/mceloud/kib/controller"
-	"github.com/mceloud/kib/crd"
-	"github.com/mceloud/kib/docker"
+	"github.com/tomkukral/kib/controller"
+	"github.com/tomkukral/kib/crd"
+	"github.com/tomkukral/kib/docker"
 
 	apiextcs "k8s.io/apiextensions-apiserver/pkg/client/clientset/clientset"
 

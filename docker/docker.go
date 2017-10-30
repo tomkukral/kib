@@ -17,7 +17,7 @@ import (
 
 	"github.com/docker/docker/api/types"
 	"github.com/heroku/docker-registry-client/registry"
-	"github.com/mceloud/kib/crd"
+	"github.com/tomkukral/kib/crd"
 
 	dockerclient "github.com/docker/docker/client"
 )

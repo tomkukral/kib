@@ -1,7 +1,7 @@
 package client
 
 import (
-	"github.com/mceloud/kib/crd"
+	"github.com/tomkukral/kib/crd"
 
 	meta_v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/fields"
