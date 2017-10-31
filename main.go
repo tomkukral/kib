@@ -5,9 +5,9 @@ import (
 	"flag"
 	"time"
 
-	"github.com/mceloud/kib/controller"
-	"github.com/mceloud/kib/crd"
-	"github.com/mceloud/kib/docker"
+	"github.com/tomkukral/kib/controller"
+	"github.com/tomkukral/kib/crd"
+	"github.com/tomkukral/kib/docker"
 
 	apiextcs "k8s.io/apiextensions-apiserver/pkg/client/clientset/clientset"
 
@@ -15,7 +15,7 @@ import (
 	"k8s.io/client-go/tools/clientcmd"
 )
 
-func GetClientConfig(kubeconfig string) (*rest.Config, error) {
+func getClientConfig(kubeconfig string) (*rest.Config, error) {
 	if kubeconfig != "" {
 		return clientcmd.BuildConfigFromFlags("", kubeconfig)
 	}
@@ -29,7 +29,7 @@ func main() {
 	password := flag.String("password", "", "Password for Docker Registry")
 	flag.Parse()
 
-	config, err := GetClientConfig(*kubeconf)
+	config, err := getClientConfig(*kubeconf)
 	if err != nil {
 		panic(err.Error())
 	}
